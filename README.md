@@ -94,9 +94,11 @@ https://www.vojtechruzicka.com/spring-boot-actuator/
         url: http://localhost:8090
   ~~~
 
-3. 여기까지 설정하면 기본적인 health 정도만 어드민에서 확인이 가능하고, 
-   추가 정보를 원한다면 외부로 노출할 actuator를 설정해 주어야 한다. 
-   (shutdown은 비노출로 설정)
+3. 여기까지 설정하면 정보 확인이 가능한 application 리스트에 추가가 되어 어드민에서 확인이 가능하다.
+   하지만, 기본적인 health 정도만 확인이 가능한데, client서비스에서 외부로 노출할 actuactor를 추가로 설정해 주어야 한다.       
+![spring-boot-admin-init](https://user-images.githubusercontent.com/6405201/54019226-04bbdd80-41ce-11e9-9a21-7dd6d732d67b.png)
+
+4. shutdown은 비노출로 설정하고 제공받고자 하는 정보를 제공하는 actuactor를 설정해 준다.
 
   **application.yml**
   ~~~
