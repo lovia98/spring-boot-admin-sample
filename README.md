@@ -1,8 +1,10 @@
 # spring-boot-admin-sample
 
 ###  소개  
-스프링 부트에서 기본적으로 제공하는 Actuator를 이용해 application에 대한 모니터링을 제공해주는 application이다.  
-actuator는 json형태로 제공해주어서, 한눈에 보기에는 불편함이 있으니 보다 보기 편하게 볼수 있도록 UI를 제공해주는 개념이다.  
+스프링 부트에서는 application의 상태 정보를 제공해 주는 actuators 기능을 제공해 주는데,  
+actuator는 json형태로 제공해주어서, 한눈에 보기에는 어려움이 있고 정보를 제공 받고 싶을 때 마다 actuator를  
+호출해줘야 하는 불편함이 있다. 
+이런 불편함을 보안해 주기 위한 UI 제공해주는 application 서비스로서, 
 스프링 팀에서 제공해주는 core module은 아니고 `Codecentric` 이라는 회사에서 만들었다.
 
 ###  application 작동 process  
