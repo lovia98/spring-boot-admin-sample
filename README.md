@@ -1,4 +1,4 @@
-#spring-boot-admin-sample
+# spring-boot-admin-sample
 
 ###  소개  
 스프링 부트에서 제공하는 Actuator를 보다 보기 편하게 볼수 있도록 UI를 제공해주는 application이다.
