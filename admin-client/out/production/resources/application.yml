@@ -1,0 +1,11 @@
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8090
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, metrics, loggers, logfile, heapdump
+        exclude: shutdown
