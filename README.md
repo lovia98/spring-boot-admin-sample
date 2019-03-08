@@ -105,3 +105,6 @@ https://www.vojtechruzicka.com/spring-boot-actuator/
         include: health, metrics, loggers, logfile, heapdump
         exclude: shutdown
   ~~~
+
+---
+[어드민 서버 접근 및 웹서비스 actuactor 접근 security적용 하기]
