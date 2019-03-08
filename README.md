@@ -56,7 +56,7 @@ https://www.vojtechruzicka.com/spring-boot-actuator/
 3. http://localhost:8090 확인
   - admin ui 화면이 펼쳐지고 admin server에 report하는 서비스가 아직 없으므로 확인할 어플리케이션이 0이라고 나온다.
 
-  ![어드민 서버 처음]: https://lovia98.github.io/studynote/assets/images/spring/spring-boot-admin-init.png
+  ![어드민 서버 처음]:(https://lovia98.github.io/studynote/assets/images/spring/spring-boot-admin-init.png)
 
 ---
 
