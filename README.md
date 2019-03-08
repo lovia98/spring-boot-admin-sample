@@ -20,9 +20,11 @@ https://docs.spring.io/spring-boot/docs/current/gradle-plugin/reference/html/
 https://www.vojtechruzicka.com/spring-boot-admin/  
 https://www.vojtechruzicka.com/spring-boot-actuator/  
 
-### 설정 guide  
+---
 
-[Admin server 설정]
+## 설정 guide  
+
+### [Admin server 설정]
 
 1. spring-boot-admin-server dependency추가  
 
@@ -60,7 +62,7 @@ https://www.vojtechruzicka.com/spring-boot-actuator/
 
 ---
 
-[client(모니터링 대상 서비스) 설정]
+### [client(모니터링 대상 서비스) 설정]
 
 1. spring-boot-admin-client dependency추가  
 
@@ -121,6 +123,6 @@ https://www.vojtechruzicka.com/spring-boot-actuator/
 ![spring-boot-logger](https://user-images.githubusercontent.com/6405201/54019705-2b2e4880-41cf-11e9-9560-a2ea3c5423ca.png)
 
 
-
 ---
-[어드민 서버 접근 및 웹서비스 actuactor 접근 security적용 하기]
+
+### [어드민 서버 접근 및 웹서비스 actuactor 접근 security적용 하기]
