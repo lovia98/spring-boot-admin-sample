@@ -96,9 +96,10 @@ https://www.vojtechruzicka.com/spring-boot-actuator/
 
 3. 여기까지 설정하면 정보 확인이 가능한 application 리스트에 추가가 되어 어드민에서 확인이 가능하다.  
    하지만, 기본적인 health 정도만 확인이 가능한데, client서비스에서 외부로 노출할 actuactor를 추가로 설정해 주어야 한다.       
-![spring-boot-admin-init](https://user-images.githubusercontent.com/6405201/54019226-04bbdd80-41ce-11e9-9a21-7dd6d732d67b.png)
 
-![spring-boot-admin-applications](https://user-images.githubusercontent.com/6405201/54019489-ab07e300-41ce-11e9-8fa5-6fabc2b8080f.png)
+![spring-boot-admin-applications](https://user-images.githubusercontent.com/6405201/54019489-ab07e300-41ce-11e9-8fa5-6fabc2b8080f.png)  
+
+![spring-boot-admin-init](https://user-images.githubusercontent.com/6405201/54019226-04bbdd80-41ce-11e9-9a21-7dd6d732d67b.png)
 
 
 4. shutdown은 비노출로 설정하고 제공받고자 하는 정보를 제공하는 actuactor를 설정해 준다.
@@ -114,7 +115,11 @@ https://www.vojtechruzicka.com/spring-boot-actuator/
   ~~~
 
 5. 'detail'이라는 메뉴에 추가적인 세부 항목이 생긴것이 보이고, 대시화면에도 그래프가 추가 된 것을 볼 수 있다.
-![spring-boot-admin-init](https://user-images.githubusercontent.com/6405201/54019525-bce98600-41ce-11e9-81be-c728e8c0dc69.png)
+
+![spring-boot-admin-detail](https://user-images.githubusercontent.com/6405201/54019698-28cbee80-41cf-11e9-9470-ce6e20fa1a65.png)
+
+![spring-boot-logger](https://user-images.githubusercontent.com/6405201/54019705-2b2e4880-41cf-11e9-9560-a2ea3c5423ca.png)
+
 
 
 ---
