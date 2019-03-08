@@ -94,7 +94,7 @@ https://www.vojtechruzicka.com/spring-boot-actuator/
         url: http://localhost:8090
   ~~~
 
-3. 여기까지 설정하면 정보 확인이 가능한 application 리스트에 추가가 되어 어드민에서 확인이 가능하다.
+3. 여기까지 설정하면 정보 확인이 가능한 application 리스트에 추가가 되어 어드민에서 확인이 가능하다.  
    하지만, 기본적인 health 정도만 확인이 가능한데, client서비스에서 외부로 노출할 actuactor를 추가로 설정해 주어야 한다.       
 ![spring-boot-admin-init](https://user-images.githubusercontent.com/6405201/54019226-04bbdd80-41ce-11e9-9a21-7dd6d732d67b.png)
 
