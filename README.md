@@ -118,7 +118,7 @@ https://www.vojtechruzicka.com/spring-boot-actuator/
         exclude: shutdown
   ~~~
 
-5. 'detail'이라는 메뉴에 추가적인 세부 항목이 생긴것이 보이고, 대시화면에도 그래프가 추가 된 것을 볼 수 있다.
+5. 'detail'이라는 메뉴에 추가적인 세부 항목이 생긴것이 보인다.
 
 ![spring-boot-admin-detail](https://user-images.githubusercontent.com/6405201/54019698-28cbee80-41cf-11e9-9470-ce6e20fa1a65.png)
 
