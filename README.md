@@ -60,7 +60,7 @@ https://www.vojtechruzicka.com/spring-boot-actuator/
 
 [client(모니터링 대상 서비스) 설정]
 
-1. spring-boot-admin-server dependency추가  
+1. spring-boot-admin-client dependency추가  
 
   **build.gradle**
   ~~~
@@ -70,7 +70,7 @@ https://www.vojtechruzicka.com/spring-boot-actuator/
     
     dependencies {
         implementation 'org.springframework.boot:spring-boot-starter-web'
-        implementation 'de.codecentric:spring-boot-admin-starter-server'
+        implementation 'de.codecentric:spring-boot-admin-starter-client'
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
     }
     
@@ -81,14 +81,27 @@ https://www.vojtechruzicka.com/spring-boot-actuator/
     }
   ~~~
 
-2. port 8090 (로컬에서 테스트 하는거라 기본 포트를 피하기 위해서)
+2. 웹서비스 상태를 보내줄 어드민 서버 url를 셋팅해준다. 
 
   **application.yml**
   ~~~
-    server:
-      port: 8090
+    spring:
+     boot:
+      admin:
+       client:
+        url: http://localhost:8090
   ~~~
 
-3. http://localhost:8090 확인
-  - admin ui 화면이 펼쳐지고 admin server에 report하는 서비스가 아직 없으므로 정보가 보이진 않는다.
+3. 여기까지 설정하면 기본적인 health 정도만 어드민에서 확인이 가능하고, 
+   추가 정보를 원한다면 외부로 노출할 actuator를 설정해 주어야 한다. 
+   (shutdown은 비노출로 설정)
 
+  **application.yml**
+  ~~~
+    management:
+      endpoints:
+    web:
+      exposure:
+        include: health, metrics, loggers, logfile, heapdump
+        exclude: shutdown
+  ~~~
