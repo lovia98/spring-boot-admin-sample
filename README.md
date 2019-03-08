@@ -1,7 +1,8 @@
 # spring-boot-admin-sample
 
 ###  소개  
-스프링 부트에서 제공하는 Actuator를 보다 보기 편하게 볼수 있도록 UI를 제공해주는 application이다.
+스프링 부트에서 기본적으로 제공하는 Actuator를 이용해 application에 대한 모니터링을 제공해주는 application이다.  
+actuator는 json형태로 제공해주어서, 한눈에 보기에는 불편함이 있으니 보다 보기 편하게 볼수 있도록 UI를 제공해주는 개념이다.  
 스프링 팀에서 제공해주는 core module은 아니고 `Codecentric` 이라는 회사에서 만들었다.
 
 ###  application 작동 process  
@@ -18,3 +19,76 @@ client-side discovery패턴의 방식과 유사하게, 모니터링 대상이 �
 https://docs.spring.io/spring-boot/docs/current/gradle-plugin/reference/html/  
 https://www.vojtechruzicka.com/spring-boot-admin/  
 https://www.vojtechruzicka.com/spring-boot-actuator/  
+
+### 설정 guide  
+
+[Admin server 설정]
+
+1. spring-boot-admin-server dependency추가  
+
+  **build.gradle**
+  ~~~
+    ext {
+        set('springBootAdminVersion', '2.1.3')
+    }
+    
+    dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation 'de.codecentric:spring-boot-admin-starter-server'
+        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    }
+    
+    dependencyManagement {
+        imports {
+            mavenBom "de.codecentric:spring-boot-admin-dependencies:${springBootAdminVersion}"
+        }
+    }
+  ~~~
+
+2. port 8090 (로컬에서 테스트 하는거라 기본 포트를 피하기 위해서)
+
+  **application.yml**
+  ~~~
+    server:
+      port: 8090
+  ~~~
+
+3. http://localhost:8090 확인
+  - admin ui 화면이 펼쳐지고 admin server에 report하는 서비스가 아직 없으므로 정보가 보이진 않는다.
+
+---
+
+[client(모니터링 대상 서비스) 설정]
+
+1. spring-boot-admin-server dependency추가  
+
+  **build.gradle**
+  ~~~
+    ext {
+        set('springBootAdminVersion', '2.1.3')
+    }
+    
+    dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation 'de.codecentric:spring-boot-admin-starter-server'
+        testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    }
+    
+    dependencyManagement {
+        imports {
+            mavenBom "de.codecentric:spring-boot-admin-dependencies:${springBootAdminVersion}"
+        }
+    }
+  ~~~
+
+2. port 8090 (로컬에서 테스트 하는거라 기본 포트를 피하기 위해서)
+
+  **application.yml**
+  ~~~
+    server:
+      port: 8090
+  ~~~
+
+3. http://localhost:8090 확인
+  - admin ui 화면이 펼쳐지고 admin server에 report하는 서비스가 아직 없으므로 정보가 보이진 않는다.
+
